@@ -18,7 +18,6 @@ export default {
   mounted() {
     fetch(API_URL)
       .then(response => response.json())
-      // .then((result) => { this.msg = result; });
       .then((result) => { this.msg = result.message; });
   },
 };
