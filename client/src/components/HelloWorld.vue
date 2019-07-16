@@ -19,6 +19,7 @@ export default {
     fetch(API_URL)
       .then(response => response.json())
       .then((result) => { this.msg = result.message; });
+    console.log('mounted');
   },
 };
 </script>
