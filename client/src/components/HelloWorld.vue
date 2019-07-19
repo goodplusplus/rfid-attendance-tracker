@@ -6,12 +6,17 @@
 
 <script>
 
+import { loginStore } from '../store/loginStore';
+
 const API_URL = 'http://localhost:8081/';
 
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  data() {
+    return {
+      msg: "Hello World!",
+      data: loginStore.data
+    };
   },
   mounted() {
     fetch(API_URL)
