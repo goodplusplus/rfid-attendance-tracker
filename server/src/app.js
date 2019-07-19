@@ -1,13 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const morgan = require('morgan');
+import express from 'express';
+import { json } from 'body-parser';
+import cors from 'cors';
 
 const port = 8081;
 
 const app = express();
-app.use(morgan('combine'));
-app.use(bodyParser.json());
+app.use(json());
 app.use(cors());
 
 app.get('/', (req, res) => {

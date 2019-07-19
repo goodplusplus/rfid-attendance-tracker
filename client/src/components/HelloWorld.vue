@@ -10,23 +10,21 @@ const API_URL = 'http://localhost:8081/';
 
 export default {
   name: 'HelloWorld',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
+  props: {
+    msg: String
   },
   mounted() {
     fetch(API_URL)
       .then(response => response.json())
-      .then((result) => { this.msg = result.message; });
-  },
-};
+      .then(result => { this.msg = result.message; })
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+h3 {
+  margin: 40px 0 0;
 }
 ul {
   list-style-type: none;
