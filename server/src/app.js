@@ -12,4 +12,9 @@ app.get('/', (req, res) => {
   res.send({ message: 'Hello Good++!' });
 });
 
+app.post('/login', (req, res) => {
+  console.log(req.body);
+  res.send({ message: 'Credentials received!' });
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}!`));
