@@ -9,7 +9,7 @@
     <div class="field">
       <label class="label">Password</label>
       <div class="control">
-        <input class="input" type="text" name="password" placeholder="****">
+        <input class="input" type="password" name="password" placeholder="****">
       </div>
     </div>
     <div class="field">
