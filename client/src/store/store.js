@@ -7,7 +7,7 @@ const store = new Vuex.Store({
   strict: true,
   state: {
     login: {
-      authenticated: false,
+      authentication: false,
     },
     user: {
       id: 0,
@@ -17,8 +17,8 @@ const store = new Vuex.Store({
     updateUserID(state, id) {
       state.user.id = id;
     },
-    updateLoginAuthentication(state, auth) {
-      state.login.authenticated = auth;
+    updateAuthentication(state, auth) {
+      state.login.authentication = auth;
     }
   }
 })
